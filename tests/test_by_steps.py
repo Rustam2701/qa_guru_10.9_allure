@@ -8,7 +8,7 @@ from utils.fixtures_steps import config_browser, going_to_the_link, find_reposit
 
 @allure.tag('Github')
 @allure.severity(Severity.NORMAL)
-@allure.label('Owner', 'eroshenkoam')
+@allure.label('owner', 'Rustam')
 @allure.feature("Tasks in repository")
 @allure.story('Checking issue № 76')
 @allure.link('https://github.com', name='Testing')
@@ -22,7 +22,7 @@ def test_decorator_steps():
 
 @allure.tag('Github')
 @allure.severity(Severity.MINOR)
-@allure.label('Owner', 'eroshenkoam')
+@allure.label('owner', 'Rustam')
 @allure.feature("Tasks in repository")
 @allure.story('Checking issue № 76')
 @allure.link('https://github.com', name='Testing')
