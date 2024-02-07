@@ -5,6 +5,7 @@ from selene.support.conditions import be
 from selene.support.shared import browser
 from utils.fixtures_steps import config_browser, going_to_the_link, find_repository, go_to_the_link, checking_issue
 
+
 @allure.tag('Github')
 @allure.severity(Severity.NORMAL)
 @allure.label('Owner', 'eroshenkoam')
@@ -17,6 +18,7 @@ def test_decorator_steps():
     find_repository('eroshenkoam/allure-example')
     going_to_the_link('eroshenkoam/allure-example')
     checking_issue('#76')
+
 
 @allure.tag('Github')
 @allure.severity(Severity.MINOR)
@@ -45,6 +47,3 @@ def test_github():
 
     with allure.step('Проверяем наличие Issue №76'):
         browser.element(by.partial_text('#76')).should(be.visible)
-
-
-
