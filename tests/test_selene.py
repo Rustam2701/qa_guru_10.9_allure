@@ -1,7 +1,6 @@
 from selene import browser, by, be
 
 
-
 def test_github():
     browser.config.window_width = 1320
     browser.config.window_height = 1080
@@ -16,6 +15,3 @@ def test_github():
     browser.element('#issues-tab').click()
 
     browser.element(by.partial_text('#76')).should(be.visible)
-
-
-

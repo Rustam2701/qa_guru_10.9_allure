@@ -1,7 +1,7 @@
 import allure
 from allure_commons.types import Severity
 from selene import browser, by, be
-from utils.fixtures_steps import config_browser, going_to_the_link, find_repository, go_to_the_link, checking_issue
+from utils.fixtures_steps import going_to_the_link, find_repository, checking_issue, go_to_the_link
 
 
 @allure.tag('Github')
@@ -11,7 +11,6 @@ from utils.fixtures_steps import config_browser, going_to_the_link, find_reposit
 @allure.story('Checking issue № 76')
 @allure.link('https://github.com', name='Testing')
 def test_decorator_steps():
-    config_browser()
     go_to_the_link()
     find_repository('eroshenkoam/allure-example')
     going_to_the_link('eroshenkoam/allure-example')
@@ -25,13 +24,6 @@ def test_decorator_steps():
 @allure.story('Checking issue № 76')
 @allure.link('https://github.com', name='Testing')
 def test_github():
-    with allure.step('Настраиваем браузер'):
-        browser.config.window_width = 1320
-        browser.config.window_height = 1080
-
-    with allure.step('Открываем страницу по ссылке'):
-        browser.open("https://github.com")
-
     with allure.step('Ищем репозиторий'):
         browser.element(".header-search-button").click()
         browser.element('#query-builder-test').click().send_keys('eroshenkoam/allure-example')

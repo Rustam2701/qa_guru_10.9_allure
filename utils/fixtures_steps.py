@@ -2,12 +2,6 @@ import allure
 from selene import browser, by, be
 
 
-@allure.step('Настраиваем браузер')
-def config_browser():
-    browser.config.window_width = 1320
-    browser.config.window_height = 1080
-
-
 @allure.step('Открываем страницу по ссылке')
 def go_to_the_link():
     browser.open("https://github.com")
