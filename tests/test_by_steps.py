@@ -1,8 +1,6 @@
 import allure
 from allure_commons.types import Severity
-from selene.support import by
-from selene.support.conditions import be
-from selene.support.shared import browser
+from selene import browser, by, be
 from utils.fixtures_steps import config_browser, going_to_the_link, find_repository, go_to_the_link, checking_issue
 
 
