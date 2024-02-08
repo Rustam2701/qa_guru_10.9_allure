@@ -2,10 +2,6 @@ from selene import browser, by, be
 
 
 def test_github():
-    browser.config.window_width = 1320
-    browser.config.window_height = 1080
-    browser.open("https://github.com")
-
     browser.element(".header-search-button").click()
     browser.element('#query-builder-test').click().send_keys('eroshenkoam/allure-example')
     browser.element('#query-builder-test').submit()
